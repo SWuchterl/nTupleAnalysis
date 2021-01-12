@@ -24,13 +24,11 @@ mass::mass(std::string name, fwlite::TFileService& fs) {
 
 void mass::Fill(const std::shared_ptr<jet> &jet, float weight){
   DeepCSV  ->Fill(jet->DeepCSV, weight);
-
   return;
 }
 
 void mass::FillMass(const float mass_val){
   invariant_mass -> Fill(mass_val);
-  
   return;
 }
 
@@ -44,7 +42,7 @@ void mass::Fillpts(std::vector<float> pts){
     pt_2 -> Fill(pts.at(1));
     pt_3 -> Fill(pts.at(2));
     pt_4 -> Fill(pts.at(3));
-    
+
     pt_4_cut -> Fill(pts.at(3));
     if(pts.at(3)>0){
         pt_3_cut -> Fill(pts.at(2));
@@ -63,10 +61,9 @@ void mass::Fillpts(std::vector<float> pts){
 /*void triggers::AddCut(std::string cut){
   DeepCSV ->GetXaxis()->FindBin(cut.c_str());
   mass    ->GetXaxis()->FindBin(cut.c_str());
-  //cutL1->GetXaxis()->FindBin(cut.c_str()); 
+  //cutL1->GetXaxis()->FindBin(cut.c_str());
   return;
 }*/
 
 
-mass::~mass(){} 
-
+mass::~mass(){}
