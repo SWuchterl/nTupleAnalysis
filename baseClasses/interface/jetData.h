@@ -31,7 +31,9 @@ namespace nTupleAnalysis {
     float phi;
     float m;
     float e;
+    float e_gen;
     TLorentzVector p;
+    TLorentzVector p_gen;
 
     float bRegCorr;
     float pt_wo_bRegCorr;
@@ -70,6 +72,31 @@ namespace nTupleAnalysis {
     int nbHadrons      ;
     int ncHadrons      ;
 
+    int isB;
+    int isLeptonicB;
+    int isLeptonicB_C;
+    int isGBB;
+    int isBB;
+    int isC;
+    int isGCC;
+    int isCC;
+    int isTau;
+    int isG;
+    int isUD;
+    int isS;
+    int isUndefined;
+
+    int hasMatch;
+    float GenJet_pt;
+    float GenJet_eta;
+    float GenJet_phi;
+    float GenJet_mass;
+
+    bool hasDRMatchedGenJet;
+    float DRGenJet_pt;
+    float DRGenJet_eta;
+    float DRGenJet_phi;
+    float DRGenJet_mass;
 
     //
     //  Tracks in Jet
@@ -184,6 +211,33 @@ namespace nTupleAnalysis {
     float DeepJetLEPB    [MAXJETS] = {0};
 
     // truth Info
+
+    int isB[MAXJETS];
+    int isLeptonicB[MAXJETS];
+    int isLeptonicB_C[MAXJETS];
+    int isGBB[MAXJETS];
+    int isBB[MAXJETS];
+    int isC[MAXJETS];
+    int isGCC[MAXJETS];
+    int isCC[MAXJETS];
+    int isTau[MAXJETS];
+    int isG[MAXJETS];
+    int isUD[MAXJETS];
+    int isS[MAXJETS];
+    int isUndefined[MAXJETS];
+
+    int hasMatch[MAXJETS];
+    float GenJet_pt[MAXJETS];
+    float GenJet_eta[MAXJETS];
+    float GenJet_phi[MAXJETS];
+    float GenJet_mass[MAXJETS];
+
+    bool hasDRMatchedGenJet[MAXJETS];
+    float DRGenJet_pt[MAXJETS];
+    float DRGenJet_eta[MAXJETS];
+    float DRGenJet_phi[MAXJETS];
+    float DRGenJet_mass[MAXJETS];
+
     int flavour        [MAXJETS];
     int flavourCleaned [MAXJETS];
     int partonFlavour  [MAXJETS];
