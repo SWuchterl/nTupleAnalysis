@@ -33,7 +33,7 @@ void btaggingHists::makeHists(std::string name, TFileDirectory& dir, std::string
   sv_Eta            = dir.make<TH1F>("sv_Eta        "            ,"Eta        ;Secondary Vertex Eta         "             ,200, -4.5, 4.5);
   sv_Phi            = dir.make<TH1F>("sv_Phi        "            ,"Phi        ;Secondary Vertex Phi         "             ,100, -3.2, 3.2);
   sv_DistJetAxis    = dir.make<TH1F>("sv_DistJetAxis"            ,"DistJetAxis;Secondary Vertex DistJetAxis "             ,100, -0.1, 4e-3);
-  sv_nSVs           = dir.make<TH1F>("sv_nSVs",     ("nSVs;    " +title+" Number of Sec. Verticies; Entries").c_str(),  10,-0.5,9.5);
+  sv_nSVs           = dir.make<TH1F>("sv_nSVs",     ("nSVs;    " +title+" Number of Sec. Vertices; Entries").c_str(),  10,-0.5,9.5);
   sv_boostOverSqrtJetPt         = dir.make<TH1F>("sv_BoostOverSqrtJetPt"     ,"vertexBoostOverSqrtJetPt;Secondary Vertex Boost/#sqrt{jet P_{T}}"      ,100, -0.1, 1.1);
   sv_massVertexEnergyFraction   = dir.make<TH1F>("sv_massVertexEnergyFraction"     ,"massVertexEnergyFraction;massSecondary VertexEnergyFraction"      ,100, -0.1,2.5);
   sv_totCharge   = dir.make<TH1F>("sv_totCharge"     ,"totCharge;totCharge"      ,11, -5.5,5.5);
